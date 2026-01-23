@@ -7,7 +7,7 @@ public class Tile : MonoBehaviour
 {
     [SerializeField] private Color _baseColor, _offsetColor;
     [SerializeField] private SpriteRenderer _renderer;
-    [SerializeField] private GameObject _highlight;
+    [SerializeField] public GameObject _highlight;
     private PlayerMovement playerMovement ;
     public bool selectedTile;
     
@@ -35,6 +35,7 @@ public class Tile : MonoBehaviour
     void OnMouseDown()
     {
         playerMovement.MoveTo(transform.position);
+
     }
 
 
