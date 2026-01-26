@@ -23,7 +23,7 @@ public class Tile : MonoBehaviour
 
     public void  OnMouseEnter()
     {
-        if (selection.activeSelf)
+        if (selection.activeSelf && !IsEnemyAbove())
         {
             _highlight.SetActive(true); 
              selectedTile = true;
@@ -37,14 +37,29 @@ public class Tile : MonoBehaviour
         selectedTile = false;
     }
     void OnMouseDown()
-    {
-        if (selection.activeSelf)
-        {
-            playerMovement.MoveTo(transform.position);
-        }
-        
+   {
+    
+    int enemyLayerMask = LayerMask.GetMask("Enemy");
+    
+    
+    RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.zero, 0f, enemyLayerMask);
 
+    
+    if (hit.collider != null) 
+    {
+        return; 
     }
 
+    
+    if (selection.activeSelf && playerMovement != null)
+    {
+        playerMovement.MoveTo(transform.position);
+    }
+   }
+bool IsEnemyAbove() {
+    Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero, 0f, LayerMask.GetMask("Enemy"));
+    return hit.collider != null;
+}
 
 }

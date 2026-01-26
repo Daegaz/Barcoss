@@ -6,13 +6,14 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 target;
     public bool isMoving = false;
     public int movements = 0;
+    public int maxMovements = 3;
     
     private Tile currentTile; 
     private Collider2D myCollider; 
+
     void Awake()
     {
-        
-        myCollider = GetComponent<Collider2D>();
+        myCollider = GetComponent<BoxCollider2D>();
     }
 
     void Start()
@@ -22,14 +23,11 @@ public class PlayerMovement : MonoBehaviour
 
     public void MoveTo(Vector2 position)
     {
-        if (!isMoving) 
+        if (!isMoving && movements < maxMovements) 
         {
             if (currentTile != null) currentTile.selection.SetActive(false);
-            
             target = position;
             isMoving = true;
-
-            
             if (myCollider != null) myCollider.enabled = false;
         }
     }
@@ -44,25 +42,27 @@ public class PlayerMovement : MonoBehaviour
             {
                 transform.position = target; 
                 isMoving = false;
-                 movements++;
-
-
-                
+                movements++;
                 if (myCollider != null) myCollider.enabled = true;
-                
-                
             }
-           
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // Activa la casilla actual
         Tile tile = collision.GetComponent<Tile>();
         if (tile != null)
         {
             currentTile = tile;
             currentTile.selection.SetActive(true);
+        }
+
+        // Activa al enemigo si estamos sobre él o cerca
+        EnemySelection enemy = collision.GetComponent<EnemySelection>();
+        if (enemy != null)
+        {
+            enemy.selection.SetActive(true);
         }
     }
 
@@ -73,6 +73,12 @@ public class PlayerMovement : MonoBehaviour
         {
             tile.selection.SetActive(false);
             if (currentTile == tile) currentTile = null;
+        }
+
+        EnemySelection enemy = collision.GetComponent<EnemySelection>();
+        if (enemy != null)
+        {
+            enemy.selection.SetActive(false);
         }
     }
 }
