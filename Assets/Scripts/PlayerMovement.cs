@@ -2,60 +2,77 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    
-    public float MoveSpeed;
+    public float MoveSpeed = 5f;
     public Vector3 target;
-    private bool moving = true;
-    [SerializeField] private int colliders;
+    public bool isMoving = false;
+    public int movements = 0;
     
+    private Tile currentTile; 
+    private Collider2D myCollider; 
+    void Awake()
+    {
+        
+        myCollider = GetComponent<Collider2D>();
+    }
+
     void Start()
     {
         target = transform.position;
-        
     }
+
     public void MoveTo(Vector2 position)
     {
-       if (!moving) return;
-
-        target = position;
-        moving = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-  {
-        if (!moving)
+        if (!isMoving) 
         {
+            if (currentTile != null) currentTile.selection.SetActive(false);
             
-            transform.position = Vector2.MoveTowards(transform.position, target, MoveSpeed * Time.deltaTime);
+            target = position;
+            isMoving = true;
 
-            if (Vector2.Distance(transform.position, target) < 0.01f)
-            {
-                transform.position = target; 
-                moving = true;
-                
-            }
+            
+            if (myCollider != null) myCollider.enabled = false;
         }
     }
+
+    void Update()
+    {
+        if (isMoving)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, MoveSpeed * Time.deltaTime);
+
+            if (Vector2.Distance(transform.position, target) < 0.001f)
+            {
+                transform.position = target; 
+                isMoving = false;
+                 movements++;
+
+
+                
+                if (myCollider != null) myCollider.enabled = true;
+                
+                
+            }
+           
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Tile tile = collision.GetComponent<Tile>();
-
-        if (tile != null && moving == false)
+        if (tile != null)
         {
-            tile._highlight.SetActive(true);
+            currentTile = tile;
+            currentTile.selection.SetActive(true);
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         Tile tile = collision.GetComponent<Tile>();
-
-        if (tile != null && moving == false)
+        if (tile != null)
         {
-            tile._highlight.SetActive(false);
+            tile.selection.SetActive(false);
+            if (currentTile == tile) currentTile = null;
         }
     }
-    }
-
-
-
+}

@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
     [SerializeField] private Color _baseColor, _offsetColor;
     [SerializeField] private SpriteRenderer _renderer;
     [SerializeField] public GameObject _highlight;
+    [SerializeField] public GameObject selection;
     private PlayerMovement playerMovement ;
     public bool selectedTile;
     
@@ -22,9 +23,12 @@ public class Tile : MonoBehaviour
 
     public void  OnMouseEnter()
     {
-        
-        _highlight.SetActive(true); 
-        selectedTile = true;
+        if (selection.activeSelf)
+        {
+            _highlight.SetActive(true); 
+             selectedTile = true;
+        }
+     
 
     }
     public void OnMouseExit()
@@ -34,7 +38,11 @@ public class Tile : MonoBehaviour
     }
     void OnMouseDown()
     {
-        playerMovement.MoveTo(transform.position);
+        if (selection.activeSelf)
+        {
+            playerMovement.MoveTo(transform.position);
+        }
+        
 
     }
 
