@@ -108,7 +108,7 @@ MonoBehaviour:
   spacing: 1.1
   gridX: 1
   gridY: 4
-  movesLeft: 16
+  movesLeft: 10
   uiText: {fileID: 0}
 --- !u!114 &-7048409593486790494
 MonoBehaviour:
@@ -123,7 +123,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipStats
   shipHealth: 100
-  crewHealth: 100
   esEnemigo: 0
 --- !u!114 &-8462451276390035010
 MonoBehaviour:
@@ -138,7 +137,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipCombat
   spacing: 1.1
-  arrowRange: 2.3
+  arrowRange: 4
   arrowCost: 2
-  rammingCost: 1
-  fuerzaRetroceso: 0
