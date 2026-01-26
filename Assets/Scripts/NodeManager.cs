@@ -6,19 +6,20 @@ public class NodeManager : MonoBehaviour
     public float moveSpeed = 5f;
     public GameObject textToActivate;
     public float yOffset = -0.3f;
-    
+    public GameObject EffectsButton;
+
     private static Transform currentTarget;
     private static GameObject currentText;
 
     void OnMouseDown()
     {
+
         if (currentText != null && currentText != textToActivate)
         {
             currentText.SetActive(false);
         }
         currentTarget = transform;
         currentText = textToActivate;
-        currentText.SetActive(true);
     }
 
     void Update()
@@ -32,5 +33,13 @@ public class NodeManager : MonoBehaviour
             targetPosition,
             moveSpeed * Time.deltaTime
         );
+        if (shipSprite.position == targetPosition) 
+        { 
+            currentText.SetActive(true);
+            EffectsButton.SetActive(true);
+        }
+      
+
+
     }
 }
