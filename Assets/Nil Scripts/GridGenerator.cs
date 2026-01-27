@@ -5,6 +5,7 @@ public class GridGenerator : MonoBehaviour
     public GameObject cellPrefab;
     public GameObject allyPrefab;
     public GameObject enemyPrefab;
+    public GameObject islandPrefab;
     public int rows = 9;
     public int cols = 9;
     public float spacing = 1.1f;
@@ -17,10 +18,16 @@ public class GridGenerator : MonoBehaviour
         {
             for (int y = 0; y < cols; y++)
             {
+                // Volvemos a la posición normal sin restas raras
                 Vector3 pos = new Vector3(x * spacing, y * spacing, 0);
                 Instantiate(cellPrefab, pos, Quaternion.identity, transform);
 
-                if (x == 1 && y == 4)
+                // Coordenadas solicitadas: (4,5), (5,5), (4,6), (5,6)
+                if ((x == 4 || x == 5) && (y == 4 || y == 5))
+                {
+                    SpawnObstacle(x, y);
+                }
+                else if (x == 1 && y == 4)
                 {
                     GameObject ally = SpawnShip(allyPrefab, "FS", x, y, false);
                     ShipMovement mov = ally.GetComponent<ShipMovement>();
@@ -38,6 +45,18 @@ public class GridGenerator : MonoBehaviour
                     TurnManager.Instance.enemyMovement = mov;
                 }
             }
+        }
+    }
+
+    void SpawnObstacle(int gx, int gy)
+    {
+        Vector3 pos = new Vector3(gx * spacing, gy * spacing, 0);
+        GameObject island = Instantiate(islandPrefab, pos, Quaternion.identity);
+        island.name = $"Island_{gx}_{gy}";
+
+        if (island.GetComponent<Obstacle>() == null)
+        {
+            island.AddComponent<Obstacle>();
         }
     }
 

@@ -1,5 +1,6 @@
-using UnityEngine;
+using System;
 using TMPro;
+using UnityEngine;
 
 public class ShipMovement : MonoBehaviour
 {
@@ -30,7 +31,6 @@ public class ShipMovement : MonoBehaviour
     {
         if (TurnManager.Instance.turnoActual != Turno.Jugador) return;
         if (!isPlayerControlled) return;
-
         if (movesLeft <= 0) return;
 
         if (Input.GetKeyDown(KeyCode.W)) TryMove(0, 1);
@@ -78,11 +78,20 @@ public class ShipMovement : MonoBehaviour
     bool IsCellOccupied(int gx, int gy)
     {
         Vector3 target = new Vector3(gx * spacing, gy * spacing, 0);
+
+        // 1. Comprobar otros barcos
         foreach (var e in UnityEngine.Object.FindObjectsByType<ShipMovement>(FindObjectsSortMode.None))
         {
             if (e.gameObject == this.gameObject) continue;
             if (Vector3.Distance(e.transform.position, target) < 0.1f) return true;
         }
+
+        // 2. Comprobar islas (Usa el script Obstacle que creamos)
+        foreach (var o in UnityEngine.Object.FindObjectsByType<Obstacle>(FindObjectsSortMode.None))
+        {
+            if (Vector3.Distance(o.transform.position, target) < 0.1f) return true;
+        }
+
         return false;
     }
 
