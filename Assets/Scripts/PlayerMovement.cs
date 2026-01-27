@@ -7,13 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public bool isMoving = false;
     public int movements = 0;
     public int maxMovements = 3;
-    
-    private Tile currentTile; 
-    private Collider2D myCollider; 
+
+    private Collider2D myCollider;
 
     void Awake()
     {
-        myCollider = GetComponent<BoxCollider2D>();
+        myCollider = GetComponent<Collider2D>();
     }
 
     void Start()
@@ -23,9 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void MoveTo(Vector2 position)
     {
-        if (!isMoving && movements < maxMovements) 
+        if (!isMoving && movements < maxMovements)
         {
-            if (currentTile != null) currentTile.selection.SetActive(false);
             target = position;
             isMoving = true;
             if (myCollider != null) myCollider.enabled = false;
@@ -34,51 +32,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (isMoving)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target, MoveSpeed * Time.deltaTime);
+        if (!isMoving) return;
 
-            if (Vector2.Distance(transform.position, target) < 0.001f)
-            {
-                transform.position = target; 
-                isMoving = false;
-                movements++;
-                if (myCollider != null) myCollider.enabled = true;
-            }
-        }
-    }
+        transform.position = Vector2.MoveTowards(transform.position, target, MoveSpeed * Time.deltaTime);
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Activa la casilla actual
-        Tile tile = collision.GetComponent<Tile>();
-        if (tile != null)
+        if (Vector2.Distance(transform.position, target) < 0.001f)
         {
-            currentTile = tile;
-            currentTile.selection.SetActive(true);
-        }
-
-        // Activa al enemigo si estamos sobre él o cerca
-        EnemySelection enemy = collision.GetComponent<EnemySelection>();
-        if (enemy != null)
-        {
-            enemy.selection.SetActive(true);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        Tile tile = collision.GetComponent<Tile>();
-        if (tile != null)
-        {
-            tile.selection.SetActive(false);
-            if (currentTile == tile) currentTile = null;
-        }
-
-        EnemySelection enemy = collision.GetComponent<EnemySelection>();
-        if (enemy != null)
-        {
-            enemy.selection.SetActive(false);
+            transform.position = target;
+            isMoving = false;
+            movements++;
+            if (myCollider != null) myCollider.enabled = true;
         }
     }
 }

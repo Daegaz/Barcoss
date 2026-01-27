@@ -1,5 +1,6 @@
 using UnityEngine;
 using System;
+using System.Collections;
 
 public class ShipCombat : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class ShipCombat : MonoBehaviour
         // BLOQUEO DE TURNO
         if (TurnManager.Instance.turnoActual != Turno.Jugador) return;
 
-        if (Input.GetKeyDown(KeyCode.J)) EjecutarRamming();
-        if (Input.GetKeyDown(KeyCode.K)) EjecutarArrowShower();
+        if (Input.GetKeyDown(KeyCode.J)) StartCoroutine(AtacarConEspera("Ramming"));
+        if (Input.GetKeyDown(KeyCode.K)) StartCoroutine(AtacarConEspera("Arrow"));
     }
 
     void EjecutarArrowShower()
@@ -44,6 +45,17 @@ public class ShipCombat : MonoBehaviour
                 movement.ConsumirMovimientos(arrowCost);
             }
         }
+    }
+    IEnumerator AtacarConEspera(string tipo)
+    {
+        // 1. Pequeña pausa de "preparación"
+        yield return new WaitForSeconds(0.2f);
+
+        if (tipo == "Ramming") EjecutarRamming();
+        else if (tipo == "Arrow") EjecutarArrowShower();
+
+        // 2. Pausa después del golpe para ver las partículas
+        yield return new WaitForSeconds(0.5f);
     }
 
     void EjecutarRamming()

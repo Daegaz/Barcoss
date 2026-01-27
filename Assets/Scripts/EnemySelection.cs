@@ -4,39 +4,31 @@ public class EnemySelection : MonoBehaviour
 {
     [SerializeField] public GameObject _highlight;
     [SerializeField] public GameObject selection;
-    
+
     private PlayerCombat playerCombat;
 
     void Start()
     {
         GameObject player = GameObject.Find("Triangle");
-        if (player != null) playerCombat = player.GetComponent<PlayerCombat>();
-        
+        if (player != null)
+            playerCombat = player.GetComponent<PlayerCombat>();
+
         _highlight.SetActive(false);
         selection.SetActive(false);
     }
 
-    
-    public void OnMouseEnter()
+    void Update()
     {
-        if (selection.activeSelf) 
-        {
-            _highlight.SetActive(true); 
-        }
-    }
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Collider2D hit = Physics2D.OverlapPoint(mousePos, LayerMask.GetMask("Enemy"));
+        bool isThisEnemyHovered = hit == GetComponent<Collider2D>();
 
-    public void OnMouseExit()
-    {
-        _highlight.SetActive(false);
-    }
+        _highlight.SetActive(isThisEnemyHovered && selection.activeSelf);
 
-    
-    void OnMouseDown()
-    {
-        if (selection.activeSelf && playerCombat != null)
+        if (isThisEnemyHovered && selection.activeSelf && Input.GetMouseButtonDown(0))
         {
             Debug.Log("Atacando a: " + gameObject.name);
-            
+            // Llama aquí a playerCombat.AttackEnemy(this) si quieres
         }
     }
 }

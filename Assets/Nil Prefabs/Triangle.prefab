@@ -107,6 +107,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShipStats
   shipHealth: 100
   esEnemigo: 1
+  efectoSangrePrefab: {fileID: 1560793378185117256, guid: 8599ac3b46624cc40b2109628a310e6a, type: 3}
 --- !u!114 &767893201187867786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d67b2bc9812d484c864b08f5014c134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShipMovement
+  isPlayerControlled: 0
   spacing: 1.1
   gridX: 0
   gridY: 0

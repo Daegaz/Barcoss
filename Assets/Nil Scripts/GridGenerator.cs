@@ -8,7 +8,7 @@ public class GridGenerator : MonoBehaviour
     public GameObject islandPrefab;
     public int rows = 9;
     public int cols = 9;
-    public float spacing = 1.1f;
+    public float spacing = 1.0f;
 
     void Start() => GenerateGrid();
 
