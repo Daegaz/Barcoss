@@ -27,7 +27,7 @@ public class NodeManager : MonoBehaviour
         if (isMoving) return; // Ignore click if already moving
 
         // ... your existing distance check and target setting ...
-        SaveData.Instance.energy--;
+        
         isMoving = true; // Lock other nodes
         VisitedText.SetActive(false);
         float distance = Vector2.Distance(shipSprite.position, transform.position);
@@ -39,11 +39,16 @@ public class NodeManager : MonoBehaviour
         }
         if (currentText != null && currentText != textToActivate)
         {
-            OutOfRangeText.SetActive(false);
             currentText.SetActive(false);
         }
+        OutOfRangeText.SetActive(false);
         currentTarget = transform;
         currentText = textToActivate;
+        
+        SaveData.Instance.energy--;
+        
+        if (EffectsButton == null)
+            VisitedText.SetActive(true);
     }
 
     void Update()
@@ -52,10 +57,12 @@ public class NodeManager : MonoBehaviour
         if (currentTarget != transform) return;
         Vector3 targetPosition = currentTarget.position + new Vector3(0f, yOffset, 0f);
 
+        float dt = Mathf.Min(Time.deltaTime, 0.02f);
+
         shipSprite.position = Vector3.MoveTowards(
             shipSprite.position,
             targetPosition,
-            moveSpeed * Time.deltaTime
+            moveSpeed * dt
         );
         if (shipSprite.position == targetPosition) 
         {
@@ -69,7 +76,6 @@ public class NodeManager : MonoBehaviour
             else
             {
                 currentText.SetActive(false);
-                VisitedText.SetActive(true);
             }
             
         }
