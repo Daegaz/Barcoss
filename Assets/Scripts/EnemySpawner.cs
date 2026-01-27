@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     
-    [SerializeField] private GridManager _gridManager;
+    [SerializeField] private Grdmamapinga _gridManager;
     [SerializeField] private GameObject[] _enemyPrefabs; 
 
     
