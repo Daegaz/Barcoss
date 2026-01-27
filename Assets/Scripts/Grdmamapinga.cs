@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridManager : MonoBehaviour
+public class Grdmamapinga : MonoBehaviour
 {
     [SerializeField] public int _width, _height;
 
