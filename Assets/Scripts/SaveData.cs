@@ -26,7 +26,7 @@ public class SaveData : MonoBehaviour
     // Optional: helper functions to modify values
     public void TakeDamage(int amount)
     {
-            HP -= amount;
+            HP += amount;
         HP = Mathf.Max(HP, 0);
     }
 

@@ -7,6 +7,8 @@ public class NodeManager : MonoBehaviour
     public GameObject textToActivate;
     public float yOffset = -0.3f;
     public GameObject EffectsButton;
+    public GameObject VisitedText;
+    public GameObject OutOfRangeText;
 
     [Header("Range Settings")]
     public float interactionRange = 5f; // The max distance allowed
@@ -27,12 +29,17 @@ public class NodeManager : MonoBehaviour
         // ... your existing distance check and target setting ...
         SaveData.Instance.energy--;
         isMoving = true; // Lock other nodes
-
+        VisitedText.SetActive(false);
         float distance = Vector2.Distance(shipSprite.position, transform.position);
-        if (distance > interactionRange) return;
-
+        if (distance > interactionRange)
+        {
+            VisitedText.SetActive(false);
+            OutOfRangeText.SetActive(true);
+            return;
+        }
         if (currentText != null && currentText != textToActivate)
         {
+            OutOfRangeText.SetActive(false);
             currentText.SetActive(false);
         }
         currentTarget = transform;
@@ -51,13 +58,20 @@ public class NodeManager : MonoBehaviour
             moveSpeed * Time.deltaTime
         );
         if (shipSprite.position == targetPosition) 
-        { 
-            currentText.SetActive(true);
+        {
+           
             isMoving = false;
             if (EffectsButton != null)
             {
+                currentText.SetActive(true);
                 EffectsButton.SetActive(true);
             }
+            else
+            {
+                currentText.SetActive(false);
+                VisitedText.SetActive(true);
+            }
+            
         }
       
 
