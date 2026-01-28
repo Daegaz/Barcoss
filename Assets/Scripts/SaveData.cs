@@ -39,19 +39,4 @@ public class SaveData : MonoBehaviour
     {
         energy += amount;
     }
-
-    //TO WRITE THE STATS IN THE TEXT
-    public TextMeshProUGUI text; // Assign your child Text in the inspector
-
-    void Update()
-    {
-        if (SaveData.Instance != null && text != null)
-        {
-            text.text = $"SHIP HP: {SaveData.Instance.HP}\n" +
-                        $"Resources: {SaveData.Instance.resources}\n" +
-                        $"Energy: {SaveData.Instance.energy}";
-        }
-    }
-
-    
 }
