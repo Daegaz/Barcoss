@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro; // Required for TextMeshPro
+using UnityEngine.SceneManagement;
 public class NodeContent : MonoBehaviour
 {
     // 1. Define what a "Headline" looks like now
@@ -23,7 +24,7 @@ public class NodeContent : MonoBehaviour
         [Header("Visuals & Behavior")]
         public Color textColor = Color.white; // Set Green for Positive, Red for Negative
         public bool isNeutral = false;        // If TRUE, button says "Continue" and stats are 0
-
+        public bool isCombat = false;
         [Header("Configuration")]
         public int minRange;
         public int maxRange;
@@ -63,6 +64,11 @@ public class NodeContent : MonoBehaviour
         {
             HeadlineOption selectedHeadline = selectedCategory.headlines[Random.Range(0, selectedCategory.headlines.Length)];
             headlineText.text = selectedHeadline.text;
+
+            if (selectedCategory.isCombat)
+            {
+                //Enter combat
+            }
 
             // 4. Determine Button Content
             if (selectedCategory.isNeutral)
