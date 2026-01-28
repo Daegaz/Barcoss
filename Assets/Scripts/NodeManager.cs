@@ -36,6 +36,7 @@ public class NodeManager : MonoBehaviour
         float distance = Vector2.Distance(shipSprite.position, transform.position);
         if (distance > interactionRange)
         {
+            currentText.SetActive(false);
             VisitedText.SetActive(false);
             OutOfRangeText.SetActive(true);
             isMoving = false;
@@ -52,11 +53,11 @@ public class NodeManager : MonoBehaviour
         OutOfRangeText.SetActive(false);
         currentTarget = transform;
         currentText = textToActivate;
-        
-        SaveData.Instance.energy--;
-        
+
         if (EffectsButton == null)
             VisitedText.SetActive(true);
+        else
+            SaveData.Instance.energy--;
         if(gameObject.name == "Node (First)")
         {
             if (FirstNodeSpeed)
