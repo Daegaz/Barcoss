@@ -1,24 +1,24 @@
 using UnityEngine;
-using System;
 
 public class ShipCombat : MonoBehaviour
 {
     public float spacing = 1.1f;
     private ShipMovement movement;
-    private System.Random rng = new System.Random();
 
-    public int arrowRange = 6;
+    // Rango bajado de 6 a 5
+    public int arrowRange = 5;
     public int arrowCost = 2;
 
     void Start() => movement = GetComponent<ShipMovement>();
 
     void Update()
     {
-        // BLOQUEO DE TURNO
         if (TurnManager.Instance.turnoActual != Turno.Jugador) return;
-
-        if (Input.GetKeyDown(KeyCode.J)) EjecutarRamming();
-        if (Input.GetKeyDown(KeyCode.K)) EjecutarArrowShower();
+        if (movement.isPlayerControlled)
+        {
+            if (Input.GetKeyDown(KeyCode.J)) EjecutarRamming();
+            if (Input.GetKeyDown(KeyCode.K)) EjecutarArrowShower();
+        }
     }
 
     void EjecutarArrowShower()
@@ -39,7 +39,7 @@ public class ShipCombat : MonoBehaviour
             ShipStats stats = enemy.GetComponent<ShipStats>();
             if (stats != null)
             {
-                float danio = (float)rng.Next(10, 21);
+                float danio = UnityEngine.Random.Range(10f, 21f);
                 stats.RecibirDanio(danio);
                 movement.ConsumirMovimientos(arrowCost);
             }
@@ -61,7 +61,9 @@ public class ShipCombat : MonoBehaviour
             ShipStats stats = enemy.GetComponent<ShipStats>();
             if (stats != null)
             {
-                stats.RecibirDanio((float)rng.Next(15, 26));
+                float danioAleatorio = UnityEngine.Random.Range(10f, 26f);
+                stats.RecibirDanio(danioAleatorio);
+
                 int dirX = Mathf.RoundToInt(dX / spacing);
                 int dirY = Mathf.RoundToInt(dY / spacing);
                 movement.Retroceder(-dirX, -dirY, 2);

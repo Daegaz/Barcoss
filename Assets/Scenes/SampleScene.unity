@@ -151,6 +151,7 @@ MonoBehaviour:
   cellPrefab: {fileID: 6771967826286536840, guid: 4d0dcf53bd4725141a2168a5074322d8, type: 3}
   allyPrefab: {fileID: 4326539271418238871, guid: 8d5cc2aa1633c6c4bba5277ea35c5306, type: 3}
   enemyPrefab: {fileID: 829239718187815570, guid: a846105e0779aa447b16343b822622e5, type: 3}
+  islandPrefab: {fileID: 2878980607106482379, guid: b667563a090e8214aa5a646c59c14439, type: 3}
   rows: 9
   cols: 9
   spacing: 1.1
