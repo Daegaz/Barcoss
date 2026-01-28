@@ -10,7 +10,7 @@ public class EffectsButton : MonoBehaviour
 
     [SerializeField] private SaveData saveData;
     [SerializeField] private NodeContent nodeContent;
-
+    [SerializeField] private LevelLoader LevelLoader;
     void OnEnable()
     {
         if (DestroyTracker.Instance != null && DestroyTracker.Instance.IsDestroyed(objectId))
@@ -27,11 +27,19 @@ public class EffectsButton : MonoBehaviour
     {
         if (DestroyTracker.Instance != null)
             DestroyTracker.Instance.MarkDestroyed(objectId);
-        
+
         Destroy(gameObject);
         NodeManager.UnlockNodes();
-        saveData.TakeDamage(nodeContent.generatedValues[0]);
-        saveData.AddResources(nodeContent.generatedValues[1]);
-        saveData.AddEnergy(nodeContent.generatedValues[2]);
+        if (nodeContent.isCombatCheck)
+        {
+            //Enter combat
+            LevelLoader.LoadLevel(2);
+        }
+        else 
+        { 
+            saveData.TakeDamage(nodeContent.generatedValues[0]);
+            saveData.AddResources(nodeContent.generatedValues[1]);
+            saveData.AddEnergy(nodeContent.generatedValues[2]);
+        }
     }
 }

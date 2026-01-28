@@ -33,21 +33,20 @@ public class NodeContent : MonoBehaviour
         public HeadlineOption[] headlines; // List of smart headlines
     }
 
-
     [Header("Setup")]
     public Category[] categories; // Set size to 3 (Positive, Neutral, Negative)
 
     [Header("UI References")]
     public TMP_Text headlineText;
     public TMP_Text buttonText;
-    
+ 
     // --- PUBLIC DATA FOR OTHER SCRIPTS --- NodeContent.generatedValues[i]
     // Index 0 = HP
     // Index 1 = Resources
     // Index 2 = Energy
     [HideInInspector]
     public int[] generatedValues;
-
+    public bool isCombatCheck = false;
     public void Randomize()
     {
         if (categories.Length == 0) return;
@@ -65,10 +64,7 @@ public class NodeContent : MonoBehaviour
             HeadlineOption selectedHeadline = selectedCategory.headlines[Random.Range(0, selectedCategory.headlines.Length)];
             headlineText.text = selectedHeadline.text;
 
-            if (selectedCategory.isCombat)
-            {
-                //Enter combat
-            }
+            
 
             // 4. Determine Button Content
             if (selectedCategory.isNeutral)
@@ -80,6 +76,10 @@ public class NodeContent : MonoBehaviour
                 generatedValues[0] = 0;
                 generatedValues[1] = 0;
                 generatedValues[2] = 0;
+                if (selectedCategory.isCombat)
+                {
+                    isCombatCheck = true;
+                }
             }
             else
             {
