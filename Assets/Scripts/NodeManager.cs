@@ -12,12 +12,15 @@ public class NodeManager : MonoBehaviour
 
     [Header("Range Settings")]
     public float interactionRange = 5f; // The max distance allowed
-
+    
 
     private static Transform currentTarget;
     private static GameObject currentText;
     private static bool isMoving = false;
     private static bool canClickNodes = true; // Starts unlocked
+    private bool isActiveNode = false;
+    private bool FirstNodeSpeed = true;
+
     void OnMouseDown()
     {
         if (!canClickNodes) return; // If it's false, the click is ignored
@@ -28,15 +31,20 @@ public class NodeManager : MonoBehaviour
 
         // ... your existing distance check and target setting ...
         
-        isMoving = true; // Lock other nodes
+        
         VisitedText.SetActive(false);
         float distance = Vector2.Distance(shipSprite.position, transform.position);
         if (distance > interactionRange)
         {
             VisitedText.SetActive(false);
             OutOfRangeText.SetActive(true);
+            isMoving = false;
             return;
         }
+
+        isActiveNode = true;
+        isMoving = true; // Lock other nodes
+
         if (currentText != null && currentText != textToActivate)
         {
             currentText.SetActive(false);
@@ -49,12 +57,22 @@ public class NodeManager : MonoBehaviour
         
         if (EffectsButton == null)
             VisitedText.SetActive(true);
+        if(gameObject.name == "Node (First)")
+        {
+            if (FirstNodeSpeed)
+            {
+                FirstNodeSpeed = false;
+                moveSpeed = 20f;
+            }
+            else
+            moveSpeed = 1.5f;
+        }
     }
 
     void Update()
     {
         if (currentTarget == null) return;
-        if (currentTarget != transform) return;
+        if (!isActiveNode) return;
         Vector3 targetPosition = currentTarget.position + new Vector3(0f, yOffset, 0f);
 
         float dt = Mathf.Min(Time.deltaTime, 0.02f);
@@ -68,6 +86,7 @@ public class NodeManager : MonoBehaviour
         {
            
             isMoving = false;
+            isActiveNode = false; 
             if (EffectsButton != null)
             {
                 currentText.SetActive(true);
