@@ -39,22 +39,25 @@ public class ShipMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D)) TryMove(1, 0);
     }
 
-    void TryMove(int dx, int dy)
+    public bool TryMove(int dx, int dy)
     {
+        if (movesLeft <= 0) return false;
+
         int tx = gridX + dx;
         int ty = gridY + dy;
 
-        if (tx >= minBound && tx <= maxBound && ty >= minBound && ty <= maxBound)
+        if (tx < minBound || tx > maxBound || ty < minBound || ty > maxBound) return false;
+
+        if (!IsCellOccupied(tx, ty))
         {
-            if (!IsCellOccupied(tx, ty))
-            {
-                gridX = tx;
-                gridY = ty;
-                movesLeft--;
-                SnapToGrid();
-                UpdateUI();
-            }
+            gridX = tx;
+            gridY = ty;
+            ConsumirMovimientos(1);
+            SnapToGrid();
+            return true;
         }
+
+        return false;
     }
 
     public void Retroceder(int dx, int dy, int fuerza)
@@ -75,21 +78,21 @@ public class ShipMovement : MonoBehaviour
 
     public void SnapToGrid() => transform.position = new Vector3(gridX * spacing, gridY * spacing, 0);
 
-    bool IsCellOccupied(int gx, int gy)
+    public bool IsCellOccupied(int gx, int gy)
     {
         Vector3 target = new Vector3(gx * spacing, gy * spacing, 0);
 
-        // 1. Comprobar otros barcos
         foreach (var e in UnityEngine.Object.FindObjectsByType<ShipMovement>(FindObjectsSortMode.None))
         {
             if (e.gameObject == this.gameObject) continue;
-            if (Vector3.Distance(e.transform.position, target) < 0.1f) return true;
+            if (Vector2.Distance(new Vector2(e.transform.position.x, e.transform.position.y),
+                                new Vector2(target.x, target.y)) < 0.1f) return true;
         }
 
-        // 2. Comprobar islas (Usa el script Obstacle que creamos)
         foreach (var o in UnityEngine.Object.FindObjectsByType<Obstacle>(FindObjectsSortMode.None))
         {
-            if (Vector3.Distance(o.transform.position, target) < 0.1f) return true;
+            if (Vector2.Distance(new Vector2(o.transform.position.x, o.transform.position.y),
+                                new Vector2(target.x, target.y)) < 0.1f) return true;
         }
 
         return false;
@@ -101,5 +104,9 @@ public class ShipMovement : MonoBehaviour
             uiText.text = "Movimientos: " + movesLeft;
     }
 
-    public void ConsumirMovimientos(int c) { movesLeft -= c; UpdateUI(); }
+    public void ConsumirMovimientos(int c)
+    {
+        movesLeft -= c;
+        UpdateUI();
+    }
 }
