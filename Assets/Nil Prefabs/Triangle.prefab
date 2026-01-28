@@ -108,6 +108,8 @@ MonoBehaviour:
   shipHealth: 100
   maxHealth: 100
   esEnemigo: 1
+  colorFlash: {r: 1, g: 0.53333336, b: 0.5372549, a: 1}
+  duracionFlash: 0.15
 --- !u!114 &767893201187867786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,4 +141,5 @@ MonoBehaviour:
   gridX: 0
   gridY: 0
   movesLeft: 10
+  moveSpeed: 8
   uiText: {fileID: 0}

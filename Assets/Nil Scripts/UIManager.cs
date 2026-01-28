@@ -22,11 +22,11 @@ public class UIManager : MonoBehaviour
 
         if (textoUI != null)
         {
-            string infoAliado = (statsFS != null) ? $"Casco: {statsFS.shipHealth:F0}" : "HUNDIDO";
-            string infoEnemigo = (statsES != null) ? $"Casco: {statsES.shipHealth:F0}" : "HUNDIDO";
+            string infoAliado = (statsFS != null) ? $"Integritat: {statsFS.shipHealth:F0}" : "ENFONSAT";
+            string infoEnemigo = (statsES != null) ? $"Integritat: {statsES.shipHealth:F0}" : "ENFONSAT";
 
-            textoUI.text = $"<b>ALIADO (FS)</b>\n{infoAliado}\n\n" +
-                           $"<b>ENEMIGO (ES)</b>\n{infoEnemigo}";
+            textoUI.text = $"<b>Tu</b>\n{infoAliado}\n\n" +
+                           $"<b>Enemic</b>\n{infoEnemigo}";
         }
     }
 }
