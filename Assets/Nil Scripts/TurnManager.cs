@@ -1,10 +1,9 @@
 using UnityEngine;
 using System.Collections;
 
-public enum Turno { Jugador, Enemigo }
-
 public class TurnManager : MonoBehaviour
 {
+    public enum Turno { Jugador, Enemigo }
     public static TurnManager Instance;
     public Turno turnoActual = Turno.Jugador;
 
@@ -12,14 +11,14 @@ public class TurnManager : MonoBehaviour
     public ShipMovement enemyMovement;
     public ShipCombat playerCombat;
 
-    private int direccionEsquiveY = 0;
     private bool flechasLanzadasEsteTurno = false;
 
-    void Awake()
-    {
-        if (Instance == null) Instance = this;
-    }
+    // Variables para la memoria de la IA
+    private int flanqueoRestante = 0;
+    private int fDirX = 0;
+    private int fDirY = 0;
 
+    void Awake() { if (Instance == null) Instance = this; }
     void Start() => StartCoroutine(CheckTurno());
 
     IEnumerator CheckTurno()
@@ -43,106 +42,113 @@ public class TurnManager : MonoBehaviour
             if (enemyMovement != null)
             {
                 enemyMovement.movesLeft = 10;
-                direccionEsquiveY = 0;
                 flechasLanzadasEsteTurno = false;
+                flanqueoRestante = 0; // Resetear memoria al empezar turno
                 StartCoroutine(IATurnoEnemigo());
             }
             else CambiarTurno(Turno.Jugador);
         }
-        else
+        else if (playerMovement != null)
         {
-            if (playerMovement != null)
-            {
-                playerMovement.movesLeft = 10;
-                playerMovement.UpdateUI();
-            }
+            playerMovement.movesLeft = 10;
+            playerMovement.UpdateUI();
         }
     }
 
     IEnumerator IATurnoEnemigo()
     {
-        UnityEngine.Debug.Log("IA: Iniciando turno táctico.");
+        ShipStats statsEnemigo = enemyMovement.GetComponent<ShipStats>();
 
         while (enemyMovement.movesLeft > 0)
         {
-            yield return new WaitForSeconds(0.4f);
+            yield return new UnityEngine.WaitForSeconds(0.4f);
             if (playerMovement == null) break;
 
             int diffX = playerMovement.gridX - enemyMovement.gridX;
             int diffY = playerMovement.gridY - enemyMovement.gridY;
+            int distAbs = Mathf.Abs(diffX) + Mathf.Abs(diffY);
+            bool modoHuida = statsEnemigo != null && statsEnemigo.ObtenerPorcentajeVida() < 0.3f;
 
-            // 1. RAMMING (Daño aleatorio 10-25)
-            if (Mathf.Abs(diffX) + Mathf.Abs(diffY) == 1)
+            // 1. ATAQUE
+            if (distAbs == 1)
             {
-                float danioRam = UnityEngine.Random.Range(10f, 26f);
-                UnityEngine.Debug.Log($"IA: Ejecutando embestida. Daño: {danioRam:F1}");
-
-                ShipStats playerStats = playerMovement.GetComponent<ShipStats>();
-                if (playerStats) playerStats.RecibirDanio(danioRam);
-
+                ShipStats pStats = playerMovement.GetComponent<ShipStats>();
+                if (pStats) pStats.RecibirDanio(UnityEngine.Random.Range(10f, 26f));
                 enemyMovement.Retroceder(-diffX, -diffY, 2);
-                enemyMovement.ConsumirMovimientos(1);
-                direccionEsquiveY = 0;
+                enemyMovement.ConsumirMovimientos(enemyMovement.ObtenerCosteAccion(1));
+                flanqueoRestante = 0;
                 continue;
             }
 
-            // 2. ARROW SHOWER (Rango reducido a 5, daño 10-20)
-            if (!flechasLanzadasEsteTurno && enemyMovement.movesLeft >= 2)
+            // 2. FLECHAS
+            int costeF = enemyMovement.ObtenerCosteAccion(2);
+            if (!flechasLanzadasEsteTurno && enemyMovement.movesLeft >= costeF)
             {
-                bool alineadoX = Mathf.Abs(diffY) < 0.1f;
-                bool alineadoY = Mathf.Abs(diffX) < 0.1f;
-                float dist = (Mathf.Abs(diffX) + Mathf.Abs(diffY)) / enemyMovement.spacing;
-
-                // Rango ajustado a 5.1f para tolerar decimales del spacing
-                if ((alineadoX || alineadoY) && dist <= 4.1f)
+                if ((diffX == 0 || diffY == 0) && (distAbs / enemyMovement.spacing) <= 4.1f)
                 {
-                    float danioArrows = UnityEngine.Random.Range(10f, 21f);
-                    UnityEngine.Debug.Log($"IA: Disparando flechas (Rango 4). Daño: {danioArrows:F1}");
-
-                    ShipStats playerStats = playerMovement.GetComponent<ShipStats>();
-                    if (playerStats) playerStats.RecibirDanio(danioArrows);
-
-                    enemyMovement.ConsumirMovimientos(2);
+                    ShipStats pStats = playerMovement.GetComponent<ShipStats>();
+                    if (pStats) pStats.RecibirDanio(UnityEngine.Random.Range(10f, 21f));
+                    enemyMovement.ConsumirMovimientos(costeF);
                     flechasLanzadasEsteTurno = true;
-                    yield return new WaitForSeconds(0.3f);
+                    flanqueoRestante = 0;
                     continue;
                 }
             }
 
-            // 3. NAVEGACIÓN
-            int stepX = (diffX != 0) ? (int)Mathf.Sign(diffX) : 0;
-            if (direccionEsquiveY != 0)
+            // 3. MOVIMIENTO
+            bool movido = false;
+
+            // Si estamos flanqueando, seguimos la dirección guardada
+            if (flanqueoRestante > 0)
             {
-                if (stepX != 0 && !enemyMovement.IsCellOccupied(enemyMovement.gridX + stepX, enemyMovement.gridY))
+                if (enemyMovement.TryMove(fDirX, fDirY))
                 {
-                    enemyMovement.TryMove(stepX, 0);
-                    direccionEsquiveY = 0;
+                    flanqueoRestante--;
+                    movido = true;
                 }
-                else
+                else flanqueoRestante = 0; // Si chocamos flanqueando, abortamos
+            }
+
+            if (!movido)
+            {
+                int stepX = (diffX != 0) ? (int)Mathf.Sign(diffX) : 0;
+                int stepY = (diffY != 0) ? (int)Mathf.Sign(diffY) : 0;
+                if (modoHuida) { stepX *= -1; stepY *= -1; }
+
+                // Intentar camino directo
+                if (stepX != 0 && enemyMovement.TryMove(stepX, 0)) movido = true;
+                else if (stepY != 0 && enemyMovement.TryMove(0, stepY)) movido = true;
+
+                // Si falla y no estamos huyendo, iniciamos maniobra de flanqueo
+                if (!movido && !modoHuida)
                 {
-                    if (!enemyMovement.TryMove(0, direccionEsquiveY))
+                    flanqueoRestante = 2; // Mantener dirección 2 pasos
+                    if (stepX != 0) // Bloqueado en X, desviamos en Y
                     {
-                        direccionEsquiveY *= -1;
-                        if (!enemyMovement.TryMove(0, direccionEsquiveY)) break;
+                        fDirX = 0;
+                        fDirY = (diffY >= 0) ? 1 : -1;
+                        if (!enemyMovement.TryMove(fDirX, fDirY))
+                        {
+                            fDirY *= -1;
+                            movido = enemyMovement.TryMove(fDirX, fDirY);
+                        }
+                        else movido = true;
+                    }
+                    else if (stepY != 0) // Bloqueado en Y, desviamos en X
+                    {
+                        fDirY = 0;
+                        fDirX = (diffX >= 0) ? 1 : -1;
+                        if (!enemyMovement.TryMove(fDirX, fDirY))
+                        {
+                            fDirX *= -1;
+                            movido = enemyMovement.TryMove(fDirX, fDirY);
+                        }
+                        else movido = true;
                     }
                 }
             }
-            else
-            {
-                if (stepX != 0 && !enemyMovement.IsCellOccupied(enemyMovement.gridX + stepX, enemyMovement.gridY))
-                {
-                    enemyMovement.TryMove(stepX, 0);
-                }
-                else
-                {
-                    direccionEsquiveY = (diffY != 0) ? (int)Mathf.Sign(diffY) : 1;
-                    if (!enemyMovement.TryMove(0, direccionEsquiveY))
-                    {
-                        direccionEsquiveY *= -1;
-                        if (!enemyMovement.TryMove(0, direccionEsquiveY)) break;
-                    }
-                }
-            }
+
+            if (!movido) break;
         }
 
         yield return new WaitForSeconds(0.5f);
