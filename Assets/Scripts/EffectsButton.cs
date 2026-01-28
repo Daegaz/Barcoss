@@ -11,6 +11,7 @@ public class EffectsButton : MonoBehaviour
     [SerializeField] private SaveData saveData;
     [SerializeField] private NodeContent nodeContent;
     [SerializeField] private LevelLoader LevelLoader;
+    public GameObject shipSprite;
     void OnEnable()
     {
         if (DestroyTracker.Instance != null && DestroyTracker.Instance.IsDestroyed(objectId))
@@ -33,6 +34,7 @@ public class EffectsButton : MonoBehaviour
         if (nodeContent.isCombatCheck)
         {
             //Enter combat
+            SaveData.Instance.startPosition= shipSprite.transform.position;
             LevelLoader.LoadLevel(3);
         }
         else 

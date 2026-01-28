@@ -269,7 +269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -628,6 +628,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 443614735}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &120386738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1253,7 +1254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1813,7 +1814,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2107,7 +2108,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2402,6 +2403,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &539845163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2637,7 +2639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2786,6 +2788,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 586116230}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &626713108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3343,7 +3346,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4642,7 +4645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4912,7 +4915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5164,6 +5167,7 @@ GameObject:
   - component: {fileID: 1188599997}
   - component: {fileID: 1188599996}
   - component: {fileID: 1188599995}
+  - component: {fileID: 1188599998}
   m_Layer: 4
   m_Name: StatsCanvas
   m_TagString: Untagged
@@ -5184,7 +5188,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 932255196}
-  m_Father: {fileID: 1882344107}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -5254,6 +5258,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 3
   m_TargetDisplay: 0
+--- !u!114 &1188599998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188599993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58a09ae0d4f8252478a07c69aa3df75b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  text: {fileID: 932255194}
 --- !u!1 &1213955258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,6 +5397,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1286479430}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1233302840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5677,7 +5695,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6262,6 +6280,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1307497638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6417,6 +6436,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 16557371}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1316493636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7081,7 +7101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7859,6 +7879,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1601952246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8150,6 +8171,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 2089296244}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1661595613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8499,6 +8521,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1506947069}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1678510234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8825,6 +8848,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1711468844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9054,7 +9078,8 @@ MonoBehaviour:
   HP: 100
   resources: 0
   energy: 10
-  text: {fileID: 932255194}
+  targetObject: {fileID: 1504805953101370055}
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!224 &1882344107
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9066,8 +9091,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1188599994}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -9517,6 +9541,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1957579000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9808,6 +9833,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1589105018}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &2058167348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10371,7 +10397,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You found the "Perro salchicha"
+  m_text: You have explored this island already.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10568,6 +10594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1504805953101370055}
   - component: {fileID: 1336772981920926335}
+  - component: {fileID: 7194322816375895332}
   m_Layer: 0
   m_Name: ExplorationShip
   m_TagString: Untagged
@@ -10575,6 +10602,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7194322816375895332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194322816375895331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a83787ba0691964c867e688207cea0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!212 &7818031521530645759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10643,7 +10682,8 @@ SceneRoots:
   - {fileID: 925498059}
   - {fileID: 912300335}
   - {fileID: 883246999}
-  - {fileID: 1882344107}
   - {fileID: 1097462543}
   - {fileID: 421693017}
   - {fileID: 325587518}
+  - {fileID: 1882344107}
+  - {fileID: 1188599994}
