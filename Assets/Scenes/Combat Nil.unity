@@ -152,8 +152,8 @@ MonoBehaviour:
   allyPrefab: {fileID: 4326539271418238871, guid: 8d5cc2aa1633c6c4bba5277ea35c5306, type: 3}
   enemyPrefab: {fileID: 829239718187815570, guid: a846105e0779aa447b16343b822622e5, type: 3}
   islandPrefab: {fileID: 2878980607106482379, guid: b667563a090e8214aa5a646c59c14439, type: 3}
-  hazardPrefab: {fileID: 8611522340960118886, guid: 87cac623e073f614f84a0dc976cff599, type: 3}
-  slowPrefab: {fileID: 5702501587948292224, guid: 555624c60b50b434da28a5d9748bf1f8, type: 3}
+  hazardPrefab: {fileID: 0}
+  slowPrefab: {fileID: 0}
   rows: 9
   cols: 9
   spacing: 1.1
