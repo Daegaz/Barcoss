@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GridManager : MonoBehaviour
+public class Grdmamapinga : MonoBehaviour
 {
-    [SerializeField] private int _width, _height;
+    [SerializeField] public int _width, _height;
 
     [SerializeField] private Tile _tilePrefab;
 
