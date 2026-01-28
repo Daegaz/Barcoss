@@ -97,7 +97,7 @@ public class GameWinManager : MonoBehaviour
         else if (GameObject.Find("ES") == null)
         {
             juegoTerminado = true;
-            MostrarFinPartida("VICTÒRIA!", Color.white, true);
+            MostrarFinPartida("L'horitzó ens somriu, però Ítaca encara resta lluny.", Color.white, true);
         }
     }
 
