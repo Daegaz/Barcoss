@@ -20,7 +20,7 @@ public class ShipMovement : MonoBehaviour
     {
         if (isPlayerControlled && uiText == null)
         {
-            GameObject txt = GameObject.Find("MovementText");
+            UnityEngine.GameObject txt = UnityEngine.GameObject.Find("MovementText");
             if (txt) uiText = txt.GetComponent<TextMeshProUGUI>();
         }
         SnapToGrid();
@@ -29,19 +29,41 @@ public class ShipMovement : MonoBehaviour
 
     void Update()
     {
-        if (TurnManager.Instance.turnoActual != Turno.Jugador) return;
-        if (!isPlayerControlled) return;
-        if (movesLeft <= 0) return;
+        if (TurnManager.Instance.turnoActual != TurnManager.Turno.Jugador) return;
+        if (!isPlayerControlled || movesLeft <= 0) return;
 
-        if (Input.GetKeyDown(KeyCode.W)) TryMove(0, 1);
-        if (Input.GetKeyDown(KeyCode.S)) TryMove(0, -1);
-        if (Input.GetKeyDown(KeyCode.A)) TryMove(-1, 0);
-        if (Input.GetKeyDown(KeyCode.D)) TryMove(1, 0);
+        if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.W)) TryMove(0, 1);
+        if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.S)) TryMove(0, -1);
+        if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.A)) TryMove(-1, 0);
+        if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.D)) TryMove(1, 0);
+    }
+
+    public int ObtenerCosteAccion(int costeBase)
+    {
+        SlowCell[] ralentizadores = UnityEngine.Object.FindObjectsByType<SlowCell>(UnityEngine.FindObjectsSortMode.None);
+        foreach (SlowCell sc in ralentizadores)
+        {
+            if (UnityEngine.Vector2.Distance(transform.position, sc.transform.position) < 0.1f)
+            {
+                return costeBase * sc.multiplicadorCoste;
+            }
+        }
+        return costeBase;
     }
 
     public bool TryMove(int dx, int dy)
     {
-        if (movesLeft <= 0) return false;
+        int costeFinal = ObtenerCosteAccion(1);
+
+        // --- REGLA DE PIEDAD ---
+        // Si el coste es mayor a 1 (estás en lodo) pero solo te queda 1 movimiento,
+        // te dejamos moverte para que no te quedes bugeado.
+        if (movesLeft < costeFinal && movesLeft == 1)
+        {
+            costeFinal = 1;
+        }
+
+        if (movesLeft < costeFinal) return false;
 
         int tx = gridX + dx;
         int ty = gridY + dy;
@@ -52,11 +74,10 @@ public class ShipMovement : MonoBehaviour
         {
             gridX = tx;
             gridY = ty;
-            ConsumirMovimientos(1);
+            ConsumirMovimientos(costeFinal);
             SnapToGrid();
             return true;
         }
-
         return false;
     }
 
@@ -76,37 +97,42 @@ public class ShipMovement : MonoBehaviour
         }
     }
 
-    public void SnapToGrid() => transform.position = new Vector3(gridX * spacing, gridY * spacing, 0);
+    public void SnapToGrid()
+    {
+        transform.position = new UnityEngine.Vector3(gridX * spacing, gridY * spacing, 0);
+        CheckForHazards();
+    }
+
+    private void CheckForHazards()
+    {
+        HazardCell[] hazards = UnityEngine.Object.FindObjectsByType<HazardCell>(UnityEngine.FindObjectsSortMode.None);
+        foreach (HazardCell h in hazards)
+        {
+            if (UnityEngine.Vector2.Distance(transform.position, h.transform.position) < 0.1f)
+            {
+                h.AplicarDanio(this.gameObject);
+                break;
+            }
+        }
+    }
 
     public bool IsCellOccupied(int gx, int gy)
     {
-        Vector3 target = new Vector3(gx * spacing, gy * spacing, 0);
-
-        foreach (var e in UnityEngine.Object.FindObjectsByType<ShipMovement>(FindObjectsSortMode.None))
+        UnityEngine.Vector3 target = new UnityEngine.Vector3(gx * spacing, gy * spacing, 0);
+        ShipMovement[] allShips = UnityEngine.Object.FindObjectsByType<ShipMovement>(UnityEngine.FindObjectsSortMode.None);
+        foreach (var e in allShips)
         {
             if (e.gameObject == this.gameObject) continue;
-            if (Vector2.Distance(new Vector2(e.transform.position.x, e.transform.position.y),
-                                new Vector2(target.x, target.y)) < 0.1f) return true;
+            if (UnityEngine.Vector2.Distance(e.transform.position, target) < 0.1f) return true;
         }
-
-        foreach (var o in UnityEngine.Object.FindObjectsByType<Obstacle>(FindObjectsSortMode.None))
+        Obstacle[] allObstacles = UnityEngine.Object.FindObjectsByType<Obstacle>(UnityEngine.FindObjectsSortMode.None);
+        foreach (var o in allObstacles)
         {
-            if (Vector2.Distance(new Vector2(o.transform.position.x, o.transform.position.y),
-                                new Vector2(target.x, target.y)) < 0.1f) return true;
+            if (UnityEngine.Vector2.Distance(o.transform.position, target) < 0.1f) return true;
         }
-
         return false;
     }
 
-    public void UpdateUI()
-    {
-        if (isPlayerControlled && uiText != null)
-            uiText.text = "Movimientos: " + movesLeft;
-    }
-
-    public void ConsumirMovimientos(int c)
-    {
-        movesLeft -= c;
-        UpdateUI();
-    }
+    public void UpdateUI() { if (isPlayerControlled && uiText != null) uiText.text = "Movimientos: " + movesLeft; }
+    public void ConsumirMovimientos(int c) { movesLeft -= c; UpdateUI(); }
 }
