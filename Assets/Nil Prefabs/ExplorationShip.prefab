@@ -216,6 +216,8 @@ MonoBehaviour:
   shipHealth: 100
   maxHealth: 1000
   esEnemigo: 0
+  colorFlash: {r: 1, g: 0.5330188, b: 0.53817624, a: 1}
+  duracionFlash: 0.15
 --- !u!114 &4817010708214460332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +235,7 @@ MonoBehaviour:
   gridX: 0
   gridY: 0
   movesLeft: 10
+  moveSpeed: 8
   uiText: {fileID: 0}
 --- !u!1 &5643171905726400425
 GameObject:
