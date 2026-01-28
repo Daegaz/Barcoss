@@ -5,7 +5,6 @@ public class ShipCombat : MonoBehaviour
     public float spacing = 1.1f;
     private ShipMovement movement;
 
-    // Rango bajado de 6 a 5
     public int arrowRange = 5;
     public int arrowCost = 2;
 
@@ -13,22 +12,26 @@ public class ShipCombat : MonoBehaviour
 
     void Update()
     {
-        if (TurnManager.Instance.turnoActual != Turno.Jugador) return;
+        // CORRECCIÓN: Referencia al enum dentro de TurnManager
+        if (TurnManager.Instance.turnoActual != TurnManager.Turno.Jugador) return;
+
         if (movement.isPlayerControlled)
         {
-            if (Input.GetKeyDown(KeyCode.J)) EjecutarRamming();
-            if (Input.GetKeyDown(KeyCode.K)) EjecutarArrowShower();
+            if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.J)) EjecutarRamming();
+            if (UnityEngine.Input.GetKeyDown(UnityEngine.KeyCode.K)) EjecutarArrowShower();
         }
     }
 
     void EjecutarArrowShower()
     {
-        if (movement.movesLeft < arrowCost) return;
-        GameObject enemy = GameObject.Find("ES");
+        int costeReal = movement.ObtenerCosteAccion(arrowCost);
+        if (movement.movesLeft < costeReal) return;
+
+        UnityEngine.GameObject enemy = UnityEngine.GameObject.Find("ES");
         if (enemy == null) return;
 
-        float diffX = Mathf.Abs(enemy.transform.position.x - transform.position.x);
-        float diffY = Mathf.Abs(enemy.transform.position.y - transform.position.y);
+        float diffX = UnityEngine.Mathf.Abs(enemy.transform.position.x - transform.position.x);
+        float diffY = UnityEngine.Mathf.Abs(enemy.transform.position.y - transform.position.y);
 
         bool alineadoHorizontal = diffY < 0.2f;
         bool alineadoVertical = diffX < 0.2f;
@@ -39,35 +42,35 @@ public class ShipCombat : MonoBehaviour
             ShipStats stats = enemy.GetComponent<ShipStats>();
             if (stats != null)
             {
-                float danio = UnityEngine.Random.Range(10f, 21f);
-                stats.RecibirDanio(danio);
-                movement.ConsumirMovimientos(arrowCost);
+                stats.RecibirDanio(UnityEngine.Random.Range(10f, 21f));
+                movement.ConsumirMovimientos(costeReal);
             }
         }
     }
 
     void EjecutarRamming()
     {
-        if (movement.movesLeft < 1) return;
-        GameObject enemy = GameObject.Find("ES");
+        int costeReal = movement.ObtenerCosteAccion(1);
+        if (movement.movesLeft < costeReal) return;
+
+        UnityEngine.GameObject enemy = UnityEngine.GameObject.Find("ES");
         if (enemy == null) return;
 
         float dX = enemy.transform.position.x - transform.position.x;
         float dY = enemy.transform.position.y - transform.position.y;
-        float dist = Vector3.Distance(transform.position, enemy.transform.position);
+        float dist = UnityEngine.Vector3.Distance(transform.position, enemy.transform.position);
 
         if (dist > 0.5f && dist < (spacing + 0.2f))
         {
             ShipStats stats = enemy.GetComponent<ShipStats>();
             if (stats != null)
             {
-                float danioAleatorio = UnityEngine.Random.Range(10f, 26f);
-                stats.RecibirDanio(danioAleatorio);
+                stats.RecibirDanio(UnityEngine.Random.Range(10f, 26f));
 
-                int dirX = Mathf.RoundToInt(dX / spacing);
-                int dirY = Mathf.RoundToInt(dY / spacing);
+                int dirX = UnityEngine.Mathf.RoundToInt(dX / spacing);
+                int dirY = UnityEngine.Mathf.RoundToInt(dY / spacing);
                 movement.Retroceder(-dirX, -dirY, 2);
-                movement.ConsumirMovimientos(1);
+                movement.ConsumirMovimientos(costeReal);
             }
         }
     }
