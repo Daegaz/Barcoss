@@ -33,7 +33,7 @@ public class EffectsButton : MonoBehaviour
         if (nodeContent.isCombatCheck)
         {
             //Enter combat
-            LevelLoader.LoadLevel(2);
+            LevelLoader.LoadLevel(3);
         }
         else 
         { 
