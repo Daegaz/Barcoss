@@ -8,7 +8,9 @@ public class SaveData : MonoBehaviour
     public int HP = 100;
     public int resources = 0;
     public int energy = 10;
-
+    public Transform targetObject;
+    [HideInInspector]
+    public Vector3 startPosition;
     private void Awake()
     {
         // Singleton pattern
@@ -21,6 +23,7 @@ public class SaveData : MonoBehaviour
         {
             Destroy(gameObject); // Prevent duplicates
         }
+        startPosition = targetObject.position;
     }
 
     // Optional: helper functions to modify values

@@ -628,6 +628,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 443614735}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &120386738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2402,6 +2403,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &539845163
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2786,6 +2788,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 586116230}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &626713108
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5394,6 +5397,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1286479430}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1233302840
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6276,6 +6280,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1307497638
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6431,6 +6436,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 16557371}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1316493636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7873,6 +7879,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1601952246
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8164,6 +8171,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 2089296244}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1661595613
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8513,6 +8521,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1506947069}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1678510234
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8839,6 +8848,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1711468844
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9068,6 +9078,8 @@ MonoBehaviour:
   HP: 100
   resources: 0
   energy: 10
+  targetObject: {fileID: 1504805953101370055}
+  startPosition: {x: 0, y: 0, z: 0}
 --- !u!224 &1882344107
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9529,6 +9541,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1687371617}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &1957579000
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9820,6 +9833,7 @@ MonoBehaviour:
   saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1589105018}
   LevelLoader: {fileID: 421693016}
+  shipSprite: {fileID: 7194322816375895331}
 --- !u!61 &2058167348
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10580,6 +10594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1504805953101370055}
   - component: {fileID: 1336772981920926335}
+  - component: {fileID: 7194322816375895332}
   m_Layer: 0
   m_Name: ExplorationShip
   m_TagString: Untagged
@@ -10587,6 +10602,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7194322816375895332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7194322816375895331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a83787ba0691964c867e688207cea0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!212 &7818031521530645759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10655,8 +10682,8 @@ SceneRoots:
   - {fileID: 925498059}
   - {fileID: 912300335}
   - {fileID: 883246999}
-  - {fileID: 1882344107}
   - {fileID: 1097462543}
   - {fileID: 421693017}
   - {fileID: 325587518}
+  - {fileID: 1882344107}
   - {fileID: 1188599994}
