@@ -8,7 +8,9 @@ public class SaveData : MonoBehaviour
     public int HP = 100;
     public int resources = 0;
     public int energy = 10;
-
+    public Transform targetObject;
+    [HideInInspector]
+    public Vector3 startPosition;
     private void Awake()
     {
         // Singleton pattern
@@ -21,6 +23,7 @@ public class SaveData : MonoBehaviour
         {
             Destroy(gameObject); // Prevent duplicates
         }
+        startPosition = targetObject.position;
     }
 
     // Optional: helper functions to modify values
@@ -39,19 +42,4 @@ public class SaveData : MonoBehaviour
     {
         energy += amount;
     }
-
-    //TO WRITE THE STATS IN THE TEXT
-    public TextMeshProUGUI text; // Assign your child Text in the inspector
-
-    void Update()
-    {
-        if (SaveData.Instance != null && text != null)
-        {
-            text.text = $"SHIP HP: {SaveData.Instance.HP}\n" +
-                        $"Resources: {SaveData.Instance.resources}\n" +
-                        $"Energy: {SaveData.Instance.energy}";
-        }
-    }
-
-    
 }
