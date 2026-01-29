@@ -1,6 +1,6 @@
 using UnityEngine;
-
-public class EffectsButton2 : MonoBehaviour
+using UnityEngine.SceneManagement;
+public class EffectsButton : MonoBehaviour
 {
     // --- PUBLIC DATA FOR OTHER SCRIPTS --- NodeContent.generatedValues[i]
     // Index 0 = HP
@@ -33,7 +33,7 @@ public class EffectsButton2 : MonoBehaviour
         {
             //Enter combat
             SaveData.Instance.startPosition= shipSprite.transform.position;
-            LevelLoader.LoadLevel(3);
+            SceneManager.LoadScene("Combat 2");
             
         }
         else 

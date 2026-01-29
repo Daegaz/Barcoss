@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class FinalButton : MonoBehaviour
+public class FinalButton2 : MonoBehaviour
 {
     public Transform shipSprite;
     
@@ -16,7 +16,7 @@ public class FinalButton : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Exploration 2");
+            SceneManager.LoadScene("Victory");
         }
     }
     void OnDrawGizmos()
