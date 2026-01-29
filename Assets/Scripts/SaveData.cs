@@ -30,16 +30,18 @@ public class SaveData : MonoBehaviour
     public void TakeDamage(int amount)
     {
             HP += amount;
-        HP = Mathf.Max(HP, 0);
+        HP = Mathf.Max(0, HP);
     }
 
     public void AddResources(int amount)
     {
         resources += amount;
+        resources = Mathf.Max(0, resources); 
     }
 
     public void AddEnergy(int amount)
     {
         energy += amount;
+        energy = Mathf.Max(0, energy);
     }
 }
