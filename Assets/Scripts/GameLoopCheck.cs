@@ -4,6 +4,12 @@ using UnityEngine.SceneManagement;
 public class GameLoopCheck : MonoBehaviour
 {
     bool hasSwitchedScene = false;
+    
+    void Start()
+    {
+        if (SaveData.Instance.isBossDone)
+            SceneManager.LoadScene("GameOver");
+    }
 
     void Update()
     {

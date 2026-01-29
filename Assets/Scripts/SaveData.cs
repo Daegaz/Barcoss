@@ -12,6 +12,7 @@ public class SaveData : MonoBehaviour
     [HideInInspector]
     public Vector3 startPosition;
     public bool isBossDone = false;
+    public bool isBossEntered = false;
     private void Awake()
     {
         // Singleton pattern

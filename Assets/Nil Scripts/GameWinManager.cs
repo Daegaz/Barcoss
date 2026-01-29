@@ -129,8 +129,8 @@ public class GameWinManager : MonoBehaviour
         if (shipStats != null && SaveData.Instance != null)
         {
             SaveData.Instance.HP = (int)shipStats.shipHealth;
-            //if (SaveData.Instance.isBossDone == true)
-            //    UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
+            if (SaveData.Instance.isBossEntered == true)
+                SaveData.Instance.isBossDone = true; ;
         }
         else if (SaveData.Instance != null)
         {

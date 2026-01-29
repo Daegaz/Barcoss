@@ -1256,7 +1256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (7)
+  objectId: Effects 2 (7)
   nodeContent: {fileID: 1444683233}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -1870,7 +1870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (9)
+  objectId: Effects 2 (9)
   nodeContent: {fileID: 147220369}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -3969,7 +3969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (4)
+  objectId: Effects 2 (4)
   nodeContent: {fileID: 353071233}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -4538,7 +4538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (Exit)
+  objectId: Effects 2 (Exit)
   nodeContent: {fileID: 344463838}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -4693,7 +4693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (0)
+  objectId: Effects 2 (0)
   nodeContent: {fileID: 1506947069}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -5991,7 +5991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (5)
+  objectId: Effects 2 (5)
   nodeContent: {fileID: 1067488873}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -6146,7 +6146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (1)
+  objectId: Effects 2 (1)
   nodeContent: {fileID: 510557609}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -8310,50 +8310,6 @@ RectTransform:
   m_AnchoredPosition: {x: -11.569429, y: 9.959685}
   m_SizeDelta: {x: 34.242, y: 7.122}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1097462541
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1097462543}
-  - component: {fileID: 1097462542}
-  m_Layer: 0
-  m_Name: DestroyTracker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1097462542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097462541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d6444da2dbefa74994576189a6f81e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!4 &1097462543
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1097462541}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.54842, y: 1.83442, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1113421463
 GameObject:
   m_ObjectHideFlags: 0
@@ -8401,7 +8357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (8)
+  objectId: Effects 2 (8)
   nodeContent: {fileID: 874778151}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -8556,7 +8512,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (2)
+  objectId: Effects 2 (2)
   nodeContent: {fileID: 470288434}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -9402,7 +9358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (First)
+  objectId: Effects 2 (First)
   nodeContent: {fileID: 16557371}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -11960,7 +11916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (3)
+  objectId: Effects 2 (3)
   nodeContent: {fileID: 40793218}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -12068,61 +12024,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1882344105
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1882344107}
-  - component: {fileID: 1882344106}
-  m_Layer: 5
-  m_Name: SaveData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1882344106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882344105}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d90e919653fa47947969e56dd269dd45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  HP: 100
-  resources: 15
-  energy: 10
-  targetObject: {fileID: 1504805953101370055}
-  startPosition: {x: 0, y: 0, z: 0}
-  isBossDone: 0
-  isBossEntered: 0
---- !u!224 &1882344107
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1882344105}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: 253}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1897768971
 GameObject:
   m_ObjectHideFlags: 0
@@ -12695,7 +12596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73346b31148913a40aa1b53634d2286a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  objectId: Effects (6)
+  objectId: Effects 2 (6)
   nodeContent: {fileID: 1025090675}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -13513,10 +13414,8 @@ SceneRoots:
   - {fileID: 455868212}
   - {fileID: 912300335}
   - {fileID: 883246999}
-  - {fileID: 1097462543}
   - {fileID: 421693017}
   - {fileID: 325587518}
-  - {fileID: 1882344107}
   - {fileID: 1188599994}
   - {fileID: 1331776373}
   - {fileID: 82010101}

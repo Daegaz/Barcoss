@@ -79,7 +79,7 @@ public class NodeManager : MonoBehaviour
     void Update()
     {
         if (gameObject.name == "Node Exit" && EffectsButton == null) { 
-            SaveData.Instance.isBossDone = true;
+            SaveData.Instance.isBossEntered = true;
             Debug.Log("Boss is started");
         
         
