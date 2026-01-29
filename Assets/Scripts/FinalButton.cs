@@ -16,6 +16,8 @@ public class FinalButton : MonoBehaviour
         }
         else
         {
+            SaveData.Instance.startPosition = new Vector3(1.352f, 2.9749999f, 0f);
+            
             SceneManager.LoadScene("Exploration 2");
         }
     }

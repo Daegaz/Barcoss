@@ -962,6 +962,8 @@ MonoBehaviour:
   playerMovement: {fileID: 0}
   enemyMovement: {fileID: 0}
   playerCombat: {fileID: 0}
+  sonidoFlechasEnemigo: {fileID: 8300000, guid: fcc2cca27977dba49bc2f9c4893a6916, type: 3}
+  sonidoEmbestidaEnemigo: {fileID: 8300000, guid: 2d2f1a2b43909784fb932138574ad8fa, type: 3}
 --- !u!114 &537009125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,6 +1896,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599849281}
   m_CullTransparentMesh: 1
+--- !u!1 &1653349151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653349153}
+  - component: {fileID: 1653349152}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1653349152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653349151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad7c4945d9460774db216ed821902ede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+--- !u!4 &1653349153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653349151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 959.65906, y: 492.6077, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1692005652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,3 +2579,4 @@ SceneRoots:
   - {fileID: 1536853171}
   - {fileID: 1181160823}
   - {fileID: 73186714}
+  - {fileID: 1653349153}
