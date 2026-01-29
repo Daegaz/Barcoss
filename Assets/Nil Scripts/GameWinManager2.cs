@@ -144,7 +144,8 @@ public class GameWinManager2 : MonoBehaviour
         }
         else
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Exploration 2");
+            //UnityEngine.SceneManagement.SceneManager.LoadScene(2);
         }
     }
 }
