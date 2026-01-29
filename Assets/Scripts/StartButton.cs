@@ -7,4 +7,5 @@ public class StartButton : MonoBehaviour
     {
         Destroy(Button);
     }
+
 }
