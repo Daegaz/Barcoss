@@ -69,6 +69,7 @@ public class GameWinManager : MonoBehaviour
     [Header("Referencias de UI")]
     public TextMeshProUGUI mensajeText;
     public GameObject botonReiniciar;
+    public GameObject Square;
 
     [SerializeField] private LevelLoader levelLoader;
     [SerializeField] private ShipStats shipStats;
@@ -79,6 +80,7 @@ public class GameWinManager : MonoBehaviour
     {
         if (mensajeText != null) mensajeText.gameObject.SetActive(false);
         if (botonReiniciar != null) botonReiniciar.SetActive(false);
+        if (Square != null) Square.SetActive(false);
     }
 
     void Update()
@@ -95,7 +97,7 @@ public class GameWinManager : MonoBehaviour
         else if (GameObject.Find("ES") == null)
         {
             juegoTerminado = true;
-            MostrarFinPartida("VICTÒRIA!", Color.yellow, true);
+            MostrarFinPartida("L'horitzó ens somriu, però Ítaca encara resta lluny.", Color.white, true);
         }
     }
 
@@ -109,9 +111,13 @@ public class GameWinManager : MonoBehaviour
         }
 
         // El botón solo sale si ganamos (o si quieres que salga siempre, quita el 'victoria')
-        if (botonReiniciar != null)
+        if (botonReiniciar != null && GameObject.Find("FS") != null)
         {
-            botonReiniciar.SetActive(true);
+            botonReiniciar.SetActive(true);;
+        }
+        if (Square != null)
+        {
+            Square.SetActive(true);
         }
     }
 
