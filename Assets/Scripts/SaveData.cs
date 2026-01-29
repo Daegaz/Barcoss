@@ -11,6 +11,7 @@ public class SaveData : MonoBehaviour
     public Transform targetObject;
     [HideInInspector]
     public Vector3 startPosition;
+    public bool isBossDone = false;
     private void Awake()
     {
         // Singleton pattern

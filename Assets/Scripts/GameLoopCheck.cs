@@ -12,7 +12,7 @@ public class GameLoopCheck : MonoBehaviour
         if (SaveData.Instance.HP == 0 || SaveData.Instance.energy == 0)
         {
             hasSwitchedScene = true;
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("GameOver");
         }
     }
 }

@@ -7,8 +7,6 @@ public class EffectsButton : MonoBehaviour
     // Index 1 = Resources
     // Index 2 = Energy
     [SerializeField] private string objectId;
-
-    [SerializeField] private SaveData saveData;
     [SerializeField] private NodeContent nodeContent;
     [SerializeField] private LevelLoader LevelLoader;
     public GameObject shipSprite;
@@ -36,14 +34,15 @@ public class EffectsButton : MonoBehaviour
             //Enter combat
             SaveData.Instance.startPosition= shipSprite.transform.position;
             LevelLoader.LoadLevel(3);
+            
         }
         else 
         { 
-            saveData.TakeDamage(nodeContent.generatedValues[0]);
+            SaveData.Instance.TakeDamage(nodeContent.generatedValues[0]);
             SaveData.Instance.HP = Mathf.Max(0, SaveData.Instance.HP);
-            saveData.AddResources(nodeContent.generatedValues[1]);
+            SaveData.Instance.AddResources(nodeContent.generatedValues[1]);
             SaveData.Instance.resources = Mathf.Max(0, SaveData.Instance.resources);
-            saveData.AddEnergy(nodeContent.generatedValues[2]);
+            SaveData.Instance.AddEnergy(nodeContent.generatedValues[2]);
             SaveData.Instance.energy = Mathf.Max(0, SaveData.Instance.energy);
         }
     }

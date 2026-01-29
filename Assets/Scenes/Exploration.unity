@@ -198,10 +198,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -346,10 +342,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -1016,10 +1008,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -1133,7 +1121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (7)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1444683233}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -1403,6 +1390,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &208846701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 208846703}
+  - component: {fileID: 208846702}
+  m_Layer: 0
+  m_Name: LeavingAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &208846702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208846701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20b7525913933f74c9ed129cb747bc0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LeavingAnimation
+  speed: 1.5
+--- !u!4 &208846703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 208846701}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.71826, y: 4.30501, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &229152625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1703,7 +1735,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (9)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 147220369}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -2467,10 +2498,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -2936,7 +2963,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -3118,7 +3145,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -3550,10 +3577,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -3698,10 +3721,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -3815,7 +3834,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (4)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 353071233}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -4385,7 +4403,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (Exit)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 344463838}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -4541,7 +4558,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (0)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1506947069}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -5259,7 +5275,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -5558,7 +5574,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -5840,7 +5856,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (5)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1067488873}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -5996,7 +6011,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (1)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 510557609}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -6278,7 +6292,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -6568,7 +6582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -6866,10 +6880,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -7818,10 +7828,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -7966,10 +7972,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -8263,7 +8265,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (8)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 874778151}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -8419,7 +8420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (2)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 470288434}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -9112,7 +9112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (First)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 16557371}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -9379,7 +9378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You have explored this island already.
+  m_text: Ja heu explorat aquesta illa.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
   m_sharedMaterial: {fileID: 6461277793173801032, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
@@ -9675,7 +9674,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -10014,10 +10013,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -10298,10 +10293,6 @@ MonoBehaviour:
     minRange: -3
     maxRange: -5
     headlines:
-    - text: 
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
     - text: Heu xocat contra una illa imperceptible per la boira!
       useHP: 1
       useResources: 0
@@ -10848,7 +10839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -11210,7 +11201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -11438,7 +11429,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -11589,7 +11580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (3)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 40793218}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -11727,10 +11717,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   HP: 100
-  resources: 0
+  resources: 15
   energy: 10
   targetObject: {fileID: 1504805953101370055}
   startPosition: {x: 0, y: 0, z: 0}
+  isBossDone: 0
 --- !u!224 &1882344107
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12177,7 +12168,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -12323,7 +12314,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   objectId: Effects (6)
-  saveData: {fileID: 1882344106}
   nodeContent: {fileID: 1025090675}
   LevelLoader: {fileID: 421693016}
   shipSprite: {fileID: 7194322816375895331}
@@ -12488,7 +12478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This island is out of Range.
+  m_text: Aquesta illa es troba massa lluny.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
   m_sharedMaterial: {fileID: 6461277793173801032, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
@@ -12778,7 +12768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Continue
+  m_text: Continuar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e2e434731bacc6941a1ab809ff6219e9, type: 2}
   m_sharedMaterial: {fileID: -5898148483139480192, guid: ddb14477338ef5049ab606f3ca5f462f, type: 2}
@@ -13148,3 +13138,4 @@ SceneRoots:
   - {fileID: 1188599994}
   - {fileID: 1331776373}
   - {fileID: 82010101}
+  - {fileID: 208846703}

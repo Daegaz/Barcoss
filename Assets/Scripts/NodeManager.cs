@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class NodeManager : MonoBehaviour
 {
     public Transform shipSprite;
@@ -38,7 +38,8 @@ public class NodeManager : MonoBehaviour
         float distance = Vector2.Distance(shipSprite.position, transform.position);
         if (distance > interactionRange)
         {
-            currentText.SetActive(false);
+            if (currentText != null)
+                currentText.SetActive(false);
             VisitedText.SetActive(false);
             OutOfRangeText.SetActive(true);
             isMoving = false;
@@ -77,6 +78,14 @@ public class NodeManager : MonoBehaviour
 
     void Update()
     {
+        if (gameObject.name == "Node Exit" && EffectsButton == null) { 
+            SaveData.Instance.isBossDone = true;
+            Debug.Log("Boss is started");
+        
+        
+            //SceneManager.LoadScene("GameOver");
+            //LeavingAnimation.instance.MovementAnimation(shipSprite);
+        }
         if (currentTarget == null) return;
         if (!isActiveNode) return;
         Vector3 targetPosition = currentTarget.position + new Vector3(0f, yOffset, 0f);

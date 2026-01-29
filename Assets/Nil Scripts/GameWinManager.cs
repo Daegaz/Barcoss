@@ -98,6 +98,7 @@ public class GameWinManager : MonoBehaviour
         {
             juegoTerminado = true;
             MostrarFinPartida("L'horitzó ens somriu, però Ítaca encara resta lluny.", Color.white, true);
+       
         }
     }
 
@@ -128,6 +129,8 @@ public class GameWinManager : MonoBehaviour
         if (shipStats != null && SaveData.Instance != null)
         {
             SaveData.Instance.HP = (int)shipStats.shipHealth;
+            //if (SaveData.Instance.isBossDone == true)
+            //    UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
         else if (SaveData.Instance != null)
         {
