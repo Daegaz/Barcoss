@@ -9,9 +9,9 @@ public class PrintStats : MonoBehaviour
     {
         if (SaveData.Instance != null && text != null)
         {
-            text.text = $"SHIP HP: {SaveData.Instance.HP}\n" +
-                        $"Resources: {SaveData.Instance.resources}\n" +
-                        $"Energy: {SaveData.Instance.energy}";
+            text.text = $" {SaveData.Instance.HP}\n" +
+                        $" {SaveData.Instance.resources}\n" +
+                        $" {SaveData.Instance.energy}";
         }
     }
 }

@@ -57,7 +57,10 @@ public class NodeManager : MonoBehaviour
         if (EffectsButton == null)
             VisitedText.SetActive(true);
         else
+        {
             SaveData.Instance.energy--;
+            SaveData.Instance.energy = Mathf.Max(0, SaveData.Instance.energy);  
+        }
         if(gameObject.name == "Node (First)")
         {
             if (FirstNodeSpeed)
