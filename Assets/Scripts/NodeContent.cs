@@ -70,7 +70,7 @@ public class NodeContent : MonoBehaviour
             if (selectedCategory.isNeutral)
             {
                 // -- NEUTRAL BEHAVIOR --
-                buttonText.text = "Continue";
+                buttonText.text = "Continuar";
 
                 // Ensure values are zero so no stats change
                 generatedValues[0] = 0;
