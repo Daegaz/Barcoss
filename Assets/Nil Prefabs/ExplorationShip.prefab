@@ -201,6 +201,8 @@ MonoBehaviour:
   spacing: 1.1
   arrowRange: 5
   arrowCost: 2
+  sonidoFlechas: {fileID: 8300000, guid: fcc2cca27977dba49bc2f9c4893a6916, type: 3}
+  sonidoEmbestida: {fileID: 8300000, guid: 2d2f1a2b43909784fb932138574ad8fa, type: 3}
 --- !u!114 &9194573155005650629
 MonoBehaviour:
   m_ObjectHideFlags: 0
