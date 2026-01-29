@@ -311,7 +311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125.5, y: 93.4}
+  m_AnchoredPosition: {x: -125.5, y: 69.1}
   m_SizeDelta: {x: 61.335, y: 61.335}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &334107319
@@ -1313,7 +1313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -688.3, y: -141.67}
+  m_AnchoredPosition: {x: -713.7, y: -141.67}
   m_SizeDelta: {x: 932.3005, y: 932.3005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1189663498
@@ -1465,7 +1465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 269.8, y: -859.6}
+  m_AnchoredPosition: {x: 229.6, y: -859.6}
   m_SizeDelta: {x: 304.53, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1406827626
@@ -1488,8 +1488,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "[WASD]: Moure\n\n[J]: Embestida \nCost 1 Accio\nRang 1 Casella\n\n[K]:
-    Llances \nCost 1 Accio\nRang 5 Caselles\n\n\tDany (-5 )\n\n\tLentitud\nDoble
+  m_text: "[WASD]: Moure\n\n[J]: Envestida \nCost 1 Accio\nRang 1 Casella\nRetroces
+    2 Caselles\n\n[K]: Llances \nCost 2 Accions\nRang 5 Caselles\n\n\tDany (-5 )\n\n\tLentitud\nDoble
     Accio\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
@@ -1807,7 +1807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -128.2, y: 45.7}
+  m_AnchoredPosition: {x: -128.2, y: 19.35}
   m_SizeDelta: {x: 54.9958, y: 54.9959}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1692005654
