@@ -40,8 +40,11 @@ public class EffectsButton : MonoBehaviour
         else 
         { 
             saveData.TakeDamage(nodeContent.generatedValues[0]);
+            SaveData.Instance.HP = Mathf.Max(0, SaveData.Instance.HP);
             saveData.AddResources(nodeContent.generatedValues[1]);
+            SaveData.Instance.resources = Mathf.Max(0, SaveData.Instance.resources);
             saveData.AddEnergy(nodeContent.generatedValues[2]);
+            SaveData.Instance.energy = Mathf.Max(0, SaveData.Instance.energy);
         }
     }
 }

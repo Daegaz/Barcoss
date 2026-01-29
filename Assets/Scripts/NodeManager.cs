@@ -9,6 +9,7 @@ public class NodeManager : MonoBehaviour
     public GameObject EffectsButton;
     public GameObject VisitedText;
     public GameObject OutOfRangeText;
+    public GameObject tutorialtext;
 
     [Header("Range Settings")]
     public float interactionRange = 5f; // The max distance allowed
@@ -23,6 +24,7 @@ public class NodeManager : MonoBehaviour
 
     void OnMouseDown()
     {
+        tutorialtext.SetActive(false); 
         if (!canClickNodes) return; // If it's false, the click is ignored
 
         // ... rest of your distance check and movement code ...

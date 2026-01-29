@@ -168,23 +168,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -193,7 +228,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -204,7 +248,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -261,23 +316,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -286,7 +376,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -297,7 +396,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -305,148 +415,6 @@ MonoBehaviour:
   buttonText: {fileID: 1793158389}
   generatedValues: 
   isCombatCheck: 0
---- !u!1 &48406751
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 48406753}
-  - component: {fileID: 48406752}
-  - component: {fileID: 48406754}
-  m_Layer: 0
-  m_Name: MusicManagerPersistent
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!82 &48406752
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48406751}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4ce0b782ad907714c8e78fa2fb356829, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.68
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!4 &48406753
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48406751}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.14351, y: 1.46082, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &48406754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 48406751}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f3fc93891cc292479b020aa5f81dafb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MusicManagerPersistent
 --- !u!1 &63502910
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,6 +551,50 @@ RectTransform:
   m_AnchoredPosition: {x: 17.002012, y: 10.865191}
   m_SizeDelta: {x: 34.242, y: 7.122}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &82010099
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82010101}
+  - component: {fileID: 82010100}
+  m_Layer: 0
+  m_Name: GameLoopCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &82010100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82010099}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23cfa5dfc147024eb29175d1e6b96f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!4 &82010101
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82010099}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.81492, y: 5.12623, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &120631755
 GameObject:
   m_ObjectHideFlags: 0
@@ -775,6 +787,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 1115403344}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 2.5
 --- !u!212 &125002146
 SpriteRenderer:
@@ -834,6 +847,96 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &125430186
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 125430187}
+  - component: {fileID: 125430188}
+  m_Layer: 0
+  m_Name: HPship
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &125430187
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125430186}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.99691737, z: -0, w: -0.07845902}
+  m_LocalPosition: {x: 0.186, y: -0.316, z: 0.01937091}
+  m_LocalScale: {x: 0.1267661, y: 0.12464642, z: 0.20393018}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 839420260}
+  m_LocalEulerAnglesHint: {x: 0, y: 189, z: 0}
+--- !u!212 &125430188
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125430186}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 677822877
+  m_SortingLayer: 1
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 326153286be85d3419bd0d1aa76f40f2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.94, y: 1.64}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &147220367
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,23 +986,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -908,7 +1046,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -919,7 +1066,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -1185,6 +1343,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 199074352}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 3
 --- !u!212 &200724576
 SpriteRenderer:
@@ -1346,6 +1505,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 597336595}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 2.5
 --- !u!212 &229152629
 SpriteRenderer:
@@ -1843,6 +2003,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 782485602}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 3
 --- !u!212 &306105070
 SpriteRenderer:
@@ -2106,6 +2267,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 258341465}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 4
 --- !u!212 &332992431
 SpriteRenderer:
@@ -2210,39 +2372,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NodeContent
   categories:
-  - name: Positive
-    textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
-    isNeutral: 0
-    isCombat: 0
-    minRange: 1
-    maxRange: 10
-    headlines:
-    - text: Positive Encounter!
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
-  - name: Negative
-    textColor: {r: 1, g: 0, b: 0, a: 1}
-    isNeutral: 0
-    isCombat: 0
-    minRange: -1
-    maxRange: -10
-    headlines:
-    - text: Negative Encounter!
-      useHP: 1
-      useResources: 1
-      useEnergy: 1
-  - name: Neutral
-    textColor: {r: 1, g: 1, b: 1, a: 1}
-    isNeutral: 1
-    isCombat: 0
-    minRange: 0
-    maxRange: 0
-    headlines:
-    - text: Neutral Encounter!
-      useHP: 0
-      useResources: 0
-      useEnergy: 0
   - name: Combat
     textColor: {r: 1, g: 0, b: 1, a: 1}
     isNeutral: 1
@@ -2250,7 +2379,8 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Al final d'aquesta secci\xF3 us trobeu amb un vaixell que us espera
+        amb les armes apunt. Us tocar\xE0 lluitar per arribar a \xCDtaca!"
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -2307,23 +2437,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -2332,7 +2497,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -2343,7 +2517,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -2487,6 +2672,142 @@ RectTransform:
   m_AnchoredPosition: {x: -13.661972, y: 7.6659946}
   m_SizeDelta: {x: 34.242, y: 7.122}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &373296237
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 373296238}
+  - component: {fileID: 373296240}
+  - component: {fileID: 373296239}
+  m_Layer: 4
+  m_Name: TutorialText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &373296238
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373296237}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.49899986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 734570715}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 17.002014, y: 10.865173}
+  m_SizeDelta: {x: 23.69, y: 6.32}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &373296239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373296237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Clica sobre una illa per viatjar-hi!
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
+  m_sharedMaterial: {fileID: 6461277793173801032, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 1
+  m_fontSizeBase: 1
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0.10603809, y: 0.017556967, z: 0.014992237, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &373296240
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 373296237}
+  m_CullTransparentMesh: 1
 --- !u!1 &391632780
 GameObject:
   m_ObjectHideFlags: 0
@@ -3199,23 +3520,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3224,7 +3580,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -3235,7 +3600,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -3292,23 +3668,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -3317,7 +3728,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -3328,7 +3748,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -3519,14 +3950,14 @@ RectTransform:
   m_GameObject: {fileID: 513401072}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 74.94522}
-  m_LocalScale: {x: 0.13, y: 0.1290708, z: 0.21452893}
+  m_LocalScale: {x: 0.1, y: 0.09928524, z: 0.16502225}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 839420260}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.016, y: 0.315}
+  m_AnchoredPosition: {x: -0.056, y: 0.133}
   m_SizeDelta: {x: 8.66, y: 0.7298}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &513401074
@@ -3549,7 +3980,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reparar
+  m_text: 'Reparar
+
+    -5    -
+
+    +5     -
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
   m_sharedMaterial: {fileID: 6461277793173801032, guid: b682eae1624d2c94685bc00ee35f9fc1, type: 2}
@@ -3583,7 +4020,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 16
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3614,7 +4051,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.29044732, z: -1.2894211, w: -4.0120196}
+  m_margin: {x: 0, y: 0.29044732, z: -1.146143, w: -4.0120196}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4724,6 +5161,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 1113421463}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 3
 --- !u!212 &678124311
 SpriteRenderer:
@@ -4951,6 +5389,7 @@ Transform:
   m_LocalScale: {x: 49.7, y: 49.7, z: 49.7}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 373296238}
   - {fileID: 63502913}
   - {fileID: 1316493634}
   - {fileID: 16557370}
@@ -5021,6 +5460,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 1316493633}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 3
 --- !u!212 &734570718
 SpriteRenderer:
@@ -5946,6 +6386,8 @@ GameObject:
   m_Component:
   - component: {fileID: 839420260}
   - component: {fileID: 839420259}
+  - component: {fileID: 839420262}
+  - component: {fileID: 839420261}
   m_Layer: 0
   m_Name: BacgkroundIcons
   m_TagString: Untagged
@@ -6025,9 +6467,69 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 513401073}
+  - {fileID: 125430187}
+  - {fileID: 1953919156}
   - {fileID: 1356935354}
   m_Father: {fileID: 1188599994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &839420261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839420258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7445139535e62d74088f0f1cd6d4ee27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!61 &839420262
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 839420258}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.1022007, y: 1.1022007}
+  m_EdgeRadius: 0
 --- !u!1 &840833777
 GameObject:
   m_ObjectHideFlags: 0
@@ -6349,10 +6851,11 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 4
+    maxRange: 5
     headlines:
-    - text: Positive Encounter!
+    - text: "Heu trobat l'illa del cicl\xF3. Despr\xE9s de perforar-li l'ull, li
+        heu robat tots els tresors!"
       useHP: 1
       useResources: 1
       useEnergy: 1
@@ -6360,24 +6863,32 @@ MonoBehaviour:
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
       useEnergy: 1
-  - name: Neutral
-    textColor: {r: 1, g: 1, b: 1, a: 1}
-    isNeutral: 1
-    isCombat: 0
-    minRange: 0
-    maxRange: 0
-    headlines:
-    - text: Neutral Encounter!
-      useHP: 0
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
       useResources: 0
       useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
   - name: Combat
     textColor: {r: 1, g: 0, b: 1, a: 1}
     isNeutral: 1
@@ -6385,7 +6896,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -6563,6 +7085,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 797464618}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 3
 --- !u!212 &885760180
 SpriteRenderer:
@@ -7066,6 +7589,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 2038643824}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 3
 --- !u!212 &933896682
 SpriteRenderer:
@@ -7264,23 +7788,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -7289,7 +7848,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -7300,7 +7868,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -7357,23 +7936,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -7382,7 +7996,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -7393,7 +8016,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -7995,6 +8629,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 1832102754}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 3
 --- !u!212 &1133368998
 SpriteRenderer:
@@ -8997,7 +9632,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0856543, y: 1.0856608, z: 1.0856602}
+  m_LocalScale: {x: 1.1467767, y: 1.1467836, z: 1.146783}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 839420260}
@@ -9240,6 +9875,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 512724024}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 3
 --- !u!212 &1408590281
 SpriteRenderer:
@@ -9348,23 +9984,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -9373,7 +10044,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -9384,7 +10064,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -9577,23 +10268,58 @@ MonoBehaviour:
     textColor: {r: 0, g: 1, b: 0.003575325, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: 1
-    maxRange: 10
+    minRange: 3
+    maxRange: 8
     headlines:
-    - text: Positive Encounter!
-      useHP: 1
+    - text: "Us heu trobat amb una illa des\xE8rtica. Al centre sembla que hi ha
+        un oasi. \xC9s un bon moment per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: Heu trobat una illa amb llogarets. Son tan hospitalaris... Us donen llar
+        i menjar.
+      useHP: 0
       useResources: 1
       useEnergy: 1
+    - text: "Us topeu amb una illa florida i preciosa. No hi ha perill, i \xE9s perfecta
+        per descansar."
+      useHP: 0
+      useResources: 0
+      useEnergy: 1
+    - text: "Arribeu a un port on reconeixen les ins\xEDgnies her\xF2iques del vostre
+        vaixell, i alguns carpinters s'ofereixen a reparar-vos el vaixell."
+      useHP: 1
+      useResources: 1
+      useEnergy: 0
   - name: Negative
     textColor: {r: 1, g: 0, b: 0, a: 1}
     isNeutral: 0
     isCombat: 0
-    minRange: -1
-    maxRange: -10
+    minRange: -3
+    maxRange: -5
     headlines:
-    - text: Negative Encounter!
+    - text: 
       useHP: 1
       useResources: 1
+      useEnergy: 1
+    - text: Heu xocat contra una illa imperceptible per la boira!
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu xocat contra unes runes marines despr\xE9s de confondre el miratge
+        per una illa!"
+      useHP: 1
+      useResources: 0
+      useEnergy: 0
+    - text: "Exploreu una illa aparentment deshabitada, per\xF2 en tornar al vaixell
+        trobeu alguns gossos salsitxa devorant els vostres recursos!"
+      useHP: 0
+      useResources: 1
+      useEnergy: 0
+    - text: "Arribeu a una illa des\xE8rtica amb un oasis al centre, per\xF2 en arribar-hi
+        veieu que era un miratge!"
+      useHP: 0
+      useResources: 0
       useEnergy: 1
   - name: Neutral
     textColor: {r: 1, g: 1, b: 1, a: 1}
@@ -9602,7 +10328,16 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Neutral Encounter!
+    - text: "Us heu trobat amb una illa frondosa, quines plantes m\xE9s acolorides!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Us heu trobat amb l'illa gos Salsitxa. Nom\xE9s hi ha gossos salsitxa?
+        No ens podem permetre m\xE9s tripulaci\xF3."
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: Arribeu a una illa massa rocosa per acollir res interessant.
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -9613,7 +10348,18 @@ MonoBehaviour:
     minRange: 0
     maxRange: 0
     headlines:
-    - text: Combat Encounter!
+    - text: "Us heu trobat amb l'illa gos salsitxa, per\xF2 uns bandits han segrestat
+        els gossos, \xE9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Oh no!! Heu arribat a una illa de pirates, i en quan us n'heu adonat
+        ja us havien rodejat. \xC9s hora de lluitar!"
+      useHP: 0
+      useResources: 0
+      useEnergy: 0
+    - text: "Heu arribat a bon port, per\xF2 en sortir us bloquegen uns bandits;
+        o els pagueu o els lluiteu (No teniu diners)."
       useHP: 0
       useResources: 0
       useEnergy: 0
@@ -11243,6 +11989,7 @@ MonoBehaviour:
   EffectsButton: {fileID: 572545389}
   VisitedText: {fileID: 1336130899}
   OutOfRangeText: {fileID: 2066249758}
+  tutorialtext: {fileID: 373296237}
   interactionRange: 4
 --- !u!212 &1929253573
 SpriteRenderer:
@@ -11297,6 +12044,96 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1953919155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953919156}
+  - component: {fileID: 1953919157}
+  m_Layer: 0
+  m_Name: RESOURCES (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1953919156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953919155}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.249, y: -0.15, z: 0.01937091}
+  m_LocalScale: {x: 0.14287716, y: 0.24009444, z: 0.3990616}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 839420260}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1953919157
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953919155}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 677822877
+  m_SortingLayer: 1
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 8ca57d78c678dbc43abd2e0647da3bab, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -12310,4 +13147,4 @@ SceneRoots:
   - {fileID: 1882344107}
   - {fileID: 1188599994}
   - {fileID: 1331776373}
-  - {fileID: 48406753}
+  - {fileID: 82010101}
